@@ -9,9 +9,9 @@ import java.io.IOException;
 public class Heart {
   public static int scale = 1;
   public static double increment = 0.1;
-  public static String name = "your frwiend";
-
+  public static String name;
   public static void main(String[] args) {
+    name = args[0];
     DecimalFormat df = new DecimalFormat("#.#");
     df.setRoundingMode(RoundingMode.CEILING);
     ArrayList<Coordinate> coords = new ArrayList<Coordinate>();
@@ -44,7 +44,7 @@ public class Heart {
 
     BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
     Graphics g = image.getGraphics();
-    g.setFont(new Font("Sans Serif", Font.BOLD, 12));
+    g.setFont(new Font("Lucida Bright", Font.BOLD, 14));
 
     Graphics2D graphics = (Graphics2D) g;
     graphics.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
